@@ -1,240 +1,49 @@
-aosp_revision: android-16.0.0_r4
-revision: refs/heads/16-qpr2
 additional_remotes:
-  - name: grapheneos
-    fetch: https://github.com/GrapheneOS/
-  - name: grapheneos-gitlab
-    fetch: https://gitlab.com/grapheneos/
+  - name: jos
+    fetch: https://github.com/dot166/
 additional_projects:
-  - path: branding
-    name: branding
-  - path: device/google/akita-kernels/6.1
-    name: device_google_akita-kernels_6.1
-    clone_depth: 1
-  - path: device/google/bluejay-kernels/6.1
-    name: device_google_bluejay-kernels_6.1
-    clone_depth: 1
-  - path: device/google/caimito-kernels/6.1
-    name: device_google_caimito-kernels_6.1
-    clone_depth: 1
-  - path: device/google/comet-kernels/6.1
-    name: device_google_comet-kernels_6.1
-    clone_depth: 1
-  - path: device/google/felix-kernels/6.1
-    name: device_google_felix-kernels_6.1
-    clone_depth: 1
-  - path: device/google/laguna-kernels/6.6
-    name: device_google_laguna-kernels_6.6
-  - path: device/google/lynx-kernels/6.1
-    name: device_google_lynx-kernels_6.1
-    clone_depth: 1
-  - path: device/google/pantah-kernels/6.1
-    name: device_google_pantah-kernels_6.1
-    clone_depth: 1
-  - path: device/google/raviole-kernels/6.1
-    name: device_google_raviole-kernels_6.1
-    clone_depth: 1
-  - path: device/google/shusky-kernels/6.1
-    name: device_google_shusky-kernels_6.1
-    clone_depth: 1
-  - path: device/google/tangorpro-kernels/6.1
-    name: device_google_tangorpro-kernels_6.1
-    clone_depth: 1
-  - path: device/google/tegu-kernels/6.1
-    name: device_google_tegu-kernels_6.1
-    clone_depth: 1
-  - path: external/AppCompatConfig
-    name: platform_external_AppCompatConfig
-    groups: pdk-fs
-    clone_depth: 1
   - path: external/AppStore
     name: platform_external_AppStore
     clone_depth: 1
-  - path: external/Auditor
-    name: platform_external_Auditor
+  - path: external/FocusLock
+    name: platform_external_FocusLock
     clone_depth: 1
-  - path: external/Camera
-    name: platform_external_Camera
+  - path: external/Music
+    name: platform_external_Music
     clone_depth: 1
-  - path: external/GmsCompatConfig
-    name: platform_external_GmsCompatConfig
+  - path: external/NightStand
+    name: platform_external_NightStand
+    clone_depth: 1
+  - path: j-lib 
+    name: jOS_j-lib
+    revision: main
+  - path: misc
+    name: misc
+    revision: main
+  - path: packages/apps/Etar
+    name: platform_packages_apps_Etar
     groups: pdk-fs
-    clone_depth: 1
-  - path: external/hardened_malloc
-    name: hardened_malloc
-  - path: external/Info
-    name: platform_external_Info
-    groups: pdk-fs
-    clone_depth: 1
-  - path: external/Messaging
-    name: platform_external_Messaging
-    clone_depth: 1
-  - path: external/PdfViewer
-    name: platform_external_PdfViewer
-    clone_depth: 1
-  - path: external/talkback
-    name: platform_external_talkback
-    clone_depth: 1
-  - path: external/vanadium
-    name: platform_external_vanadium
-    clone_depth: 1
-    remote: grapheneos-gitlab
-  - path: packages/apps/AppCompatConfig
-    name: platform_packages_apps_AppCompatConfig
-    groups: pdk-fs
-  - path: packages/apps/CarrierConfig2
-    name: platform_packages_apps_CarrierConfig2
-    groups: pdk-cw-fs,pdk-fs
-  - path: packages/apps/DeskClock
-    name: platform_packages_apps_DeskClock
-    groups: pdk-fs
-  - path: packages/apps/ExactCalculator
-    name: platform_packages_apps_ExactCalculator
-  - path: packages/apps/GmsCompat
-    name: platform_packages_apps_GmsCompat
-    groups: pdk-fs
-  - path: packages/apps/LogViewer
-    name: platform_packages_apps_LogViewer
-    groups: pdk-fs
-  - path: packages/apps/NetworkLocation
-    name: platform_packages_apps_NetworkLocation
-    groups: pdk-fs
-  - path: packages/apps/Seedvault
-    name: platform_packages_apps_Seedvault
-  - path: packages/apps/SetupWizard2
-    name: platform_packages_apps_SetupWizard2
-  - path: packages/apps/Updater
-    name: platform_packages_apps_Updater
-  - path: prebuilts/qemu-kernel
-    name: platform_prebuilts_qemu-kernel
-    groups: pdk
-    clone_depth: 1
-  - path: script
-    name: script
-  - path: tools/arsclib
-    name: platform_tools_arsclib
-    groups: pdk
-  - path: vendor/adevtool
-    name: adevtool
-  - path: vendor/state
-    name: vendor_state
-    clone_depth: 1
+  - path: packages/apps/Recorder
+    name: platform_packages_apps_Recorder
 additional_non_manifest_repos:
-  - kernel_common-6.1
-  - kernel_common-6.6
-  - kernel_common-6.12
-  - kernel_manifest-6.1
-  - kernel_manifest-6.6
-  - kernel_manifest-6.12
-  - kernel_pixel
-  - kernel_pixel_muzel
   - platform_manifest
-forked_aosp_repos:
-  grapheneos:
-    - art
-    - bionic
-    - bootable/recovery
-    - build/make
-    - build/release
-    - build/soong
-    - development
-    - device/common
-    - device/generic/goldfish
-    - external/conscrypt
-    - external/dng_sdk
-    - external/libpng
-    - external/selinux
-    - external/sqlite
-    - frameworks/base
-    - frameworks/libs/systemui
-    - frameworks/native
-    - frameworks/opt/net/wifi
-    - frameworks/opt/telephony
-    - hardware/st/nfc
-    - libcore
-    - packages/apps/Calendar
-    - packages/apps/CellBroadcastReceiver
-    - packages/apps/Contacts
-    - packages/apps/Dialer
-    - packages/apps/DocumentsUI
-    - packages/apps/EmergencyInfo
-    - packages/apps/Gallery2
-    - packages/apps/Launcher3
-    - packages/apps/Settings
-    - packages/apps/SettingsIntelligence
-    - packages/apps/StorageManager
-    - packages/apps/ThemePicker
-    - packages/apps/WallpaperPicker2
-    - packages/inputmethods/LatinIME
-    - packages/modules/adb
-    - packages/modules/AppSearch
-    - packages/modules/Bluetooth
-    - packages/modules/common
-    - packages/modules/ConfigInfrastructure
-    - packages/modules/Connectivity
-    - packages/modules/DnsResolver
-    - packages/modules/HealthFitness
-    - packages/modules/NetworkStack
-    - packages/modules/Nfc
-    - packages/modules/Permission
-    - packages/modules/RemoteKeyProvisioning
-    - packages/modules/StatsD
-    - packages/modules/Uwb
-    - packages/modules/Virtualization
-    - packages/modules/Wifi
-    - packages/providers/ContactsProvider
-    - packages/providers/DownloadProvider
-    - packages/providers/MediaProvider
-    - packages/providers/TelephonyProvider
-    - packages/services/Mms
-    - packages/services/Telecomm
-    - packages/services/Telephony
-    - system/ca-certificates
-    - system/core
-    - system/extras
-    - system/logging
-    - system/netd
-    - system/sepolicy
-    - system/tools/aidl
-    - system/vold
-    - tools/apksig
-    - tools/metalava
-clone_depth_1_aosp_repos:
-  - external/deqp
-  - external/icu
-  - external/kotlinc
-  - external/llvm
-  - external/llvm-libc
-  - external/openwrt-prebuilts
-  - external/swiftshader
-  - packages/apps/Car/CalendarPrebuilt
-  - packages/apps/Car/DialerPrebuilt
-  - packages/apps/Car/DriverUIPrebuilt
-  - packages/apps/Car/MediaPrebuilt
-  - packages/apps/Car/MessengerPrebuilt
-  - packages/apps/Car/RadioPrebuilt
-  - packages/apps/Car/RotaryImePrebuilt
-  - tools/deviceinfra/prebuilts
-removed_aosp_repos:
-  - device/google/atv
-  - device/google/common/etm
-  - device/google/contexthub
-  - device/google/trout
-  - external/chromium-webview
-  - external/nos/host/generic
-  - hardware/google/av
-  - hardware/google/pixel
-  - hardware/google/pixel-sepolicy
-  - hardware/nxp/nfc
-  - hardware/nxp/secure_element
-  - packages/apps/Browser2
-  - packages/apps/Camera2
-  - packages/apps/DeskClock
-  - packages/apps/Gallery
-  - packages/apps/LegacyCamera
-  - packages/apps/Messaging
-  - packages/apps/QuickSearchBox
-  - prebuilts/bazel/darwin-x86_64
-  - prebuilts/clang/host/darwin-x86
-  - prebuilts/go/darwin-x86
-  - prebuilts/qemu-kernel
+forked_repos:
+  jos:
+    - platform_build
+    - platform_build_release
+    - platform_frameworks_base
+    - platform_frameworks_libs_systemui
+    - platform_packages_apps_DeskClock
+    - platform_packages_apps_Dialer
+    - platform_packages_apps_Launcher3
+    - platform_packages_apps_Settings
+    - platform_packages_apps_SetupWizard2
+    - platform_packages_apps_Updater
+    - platform_packages_inputmethods_LatinIME
+    - platform_packages_services_Telecomm
+removed_repos:
+  - platform_external_AppStore
+  - platform_external_Auditor
+  - platform_external_Info
+  - platform_packages_apps_Calendar
+  - platform/packages/apps/Music
