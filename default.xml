@@ -3,8 +3,8 @@
 'manifest' from the root of OS checkout. -->
 <manifest>
   <remote name="jos" fetch="https://github.com/dot166/" revision="refs/heads/16-qpr2"/>
-  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026042100"/>
-  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026042100"/>
+  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026050900"/>
+  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026050900"/>
   <remote name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/"/>
   <default revision="refs/tags/android-16.0.0_r4" remote="aosp" sync-j="4"/>
   <superproject name="platform/superproject" remote="aosp" revision="android-16.0.0_r4"/>
