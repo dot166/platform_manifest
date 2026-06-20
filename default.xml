@@ -652,7 +652,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="frameworks/libs/modules-utils" name="platform/frameworks/libs/modules-utils" groups="pdk-cw-fs,pdk-fs,sysui-studio"/>
   <project path="frameworks/libs/native_bridge_support" name="platform/frameworks/libs/native_bridge_support" groups="pdk"/>
   <project path="frameworks/libs/service_entitlement" name="platform/frameworks/libs/service_entitlement" groups="pdk"/>
-  <project path="frameworks/libs/systemui" name="platform_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="jos" aosp-name="platform/frameworks/libs/systemui"/>
+  <project path="frameworks/libs/systemui" name="platform_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="grapheneos" aosp-name="platform/frameworks/libs/systemui"/>
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs,pdk-fs"/>
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs"/>
   <project path="frameworks/native" name="platform_frameworks_native" groups="pdk,sysui-studio" remote="grapheneos" aosp-name="platform/frameworks/native"/>
