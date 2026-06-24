@@ -3,8 +3,8 @@
 and run 'manage manifest_only' from the root of OS checkout. -->
 <manifest>
   <remote name="jos" fetch="https://github.com/dot166/" revision="refs/heads/17"/>
-  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026061800"/>
-  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026061800"/>
+  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026062200"/>
+  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026062200"/>
   <remote name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/"/>
   <default revision="refs/tags/android-17.0.0_r1" remote="aosp" sync-j="4"/>
   <superproject name="platform/superproject" remote="aosp" revision="android-17.0.0_r1"/>
@@ -1047,7 +1047,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="system/tools/sysprop" name="platform/system/tools/sysprop" groups="pdk"/>
   <project path="system/tools/xsdc" name="platform/system/tools/xsdc" groups="pdk"/>
   <project path="system/unwinding" name="platform/system/unwinding" groups="pdk"/>
-  <project path="system/update_engine" name="platform/system/update_engine" groups="pdk"/>
+  <project path="system/update_engine" name="platform_system_update_engine" groups="pdk" remote="grapheneos" aosp-name="platform/system/update_engine"/>
   <project path="system/usb" name="platform/system/usb" groups="pdk"/>
   <project path="system/usb_info_tools" name="platform/system/usb_info_tools" groups="pdk"/>
   <project path="system/vold" name="platform_system_vold" groups="pdk" remote="grapheneos" aosp-name="platform/system/vold"/>
