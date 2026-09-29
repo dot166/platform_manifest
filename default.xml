@@ -791,7 +791,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="packages/apps/Updater" name="platform_packages_apps_Updater" remote="jos"/>
   <project path="packages/apps/VirtualGamepad" name="platform/packages/apps/VirtualGamepad" groups="pdk-fs"/>
   <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="grapheneos" aosp-name="platform/packages/apps/WallpaperPicker2"/>
-  <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" groups="pdk-fs" remote="jos" aosp-name="platform/packages/inputmethods/LatinIME"/>
+  <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" groups="pdk-fs" remote="grapheneos" aosp-name="platform/packages/inputmethods/LatinIME"/>
   <project path="packages/inputmethods/LeanbackIME" name="platform/packages/inputmethods/LeanbackIME" groups="pdk-fs"/>
   <project path="packages/modules/adb" name="platform_packages_modules_adb" groups="pdk" remote="grapheneos" aosp-name="platform/packages/modules/adb"/>
   <project path="packages/modules/AdServices" name="platform_packages_modules_AdServices" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="grapheneos" aosp-name="platform/packages/modules/AdServices"/>
