@@ -3,8 +3,8 @@
 and run 'manage manifest_only' from the root of OS checkout. -->
 <manifest>
   <remote name="jos" fetch="https://github.com/dot166/" revision="refs/heads/17"/>
-  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026092500"/>
-  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026092500"/>
+  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026100200"/>
+  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026100200"/>
   <remote name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/"/>
   <default revision="refs/tags/android-17.0.0_r1" remote="aosp" sync-j="4"/>
   <superproject name="platform/superproject" remote="aosp" revision="android-17.0.0_r1"/>
@@ -864,7 +864,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="packages/services/Mms" name="platform_packages_services_Mms" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/services/Mms"/>
   <project path="packages/services/Mtp" name="platform/packages/services/Mtp" groups="pdk-cw-fs,pdk-fs"/>
   <project path="packages/services/QualifiedNetworksService" name="platform/packages/services/QualifiedNetworksService" groups="pdk-cw-fs,pdk-fs"/>
-  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/services/Telecomm"/>
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="jos" aosp-name="platform/packages/services/Telecomm"/>
   <project path="packages/services/Telephony" name="platform_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/services/Telephony"/>
   <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" groups="pdk-fs"/>
   <project path="pdk" name="platform/pdk" groups="pdk"/>
