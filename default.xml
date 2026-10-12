@@ -295,7 +295,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="external/kotlin-compose-compiler" name="platform/external/kotlin-compose-compiler" groups="pdk"/>
   <project path="external/kotlin.metadata" name="platform/external/kotlin.metadata" groups="pdk"/>
   <project path="external/kotlinc" name="platform/external/kotlinc" groups="pdk" clone-depth="1"/>
-  <project path="external/kotlinpoet" name="platform/external/kotlinpoet" groups="pdk"/>
+  <project path="external/kotlinpoet" name="platform_external_kotlinpoet" groups="pdk" remote="jos"/>
   <project path="external/kotlinx.atomicfu" name="platform/external/kotlinx.atomicfu" groups="pdk"/>
   <project path="external/kotlinx.coroutines" name="platform/external/kotlinx.coroutines" groups="pdk"/>
   <project path="external/kotlinx.metadata" name="platform/external/kotlinx.metadata" groups="pdk"/>
