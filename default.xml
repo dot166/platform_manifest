@@ -3,8 +3,8 @@
 and run 'manage manifest_only' from the root of OS checkout. -->
 <manifest>
   <remote name="jos" fetch="https://github.com/dot166/" revision="refs/heads/17"/>
-  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026100200"/>
-  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026100200"/>
+  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026100600"/>
+  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026100600"/>
   <remote name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/"/>
   <default revision="refs/tags/android-17.0.0_r1" remote="aosp" sync-j="4"/>
   <superproject name="platform/superproject" remote="aosp" revision="android-17.0.0_r1"/>
@@ -273,6 +273,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="external/jctools" name="platform/external/jctools" groups="pdk"/>
   <project path="external/jemalloc_new" name="platform/external/jemalloc_new" groups="pdk"/>
   <project path="external/jetpack-camera-app" name="platform/external/jetpack-camera-app" groups="pdk"/>
+  <project path="external/jetpref" name="jetpref" revision="main" remote="jos"/>
   <project path="external/jimfs" name="platform/external/jimfs" groups="pdk"/>
   <project path="external/jipp" name="platform/external/jipp" groups="pdk"/>
   <project path="external/jline" name="platform/external/jline" groups="pdk,tradefed,pdk-fs"/>
@@ -358,6 +359,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="external/libpalmrejection" name="platform/external/libpalmrejection" groups="pdk"/>
   <project path="external/libpcap" name="platform/external/libpcap" groups="pdk"/>
   <project path="external/libpciaccess" name="platform/external/libpciaccess" groups="pdk"/>
+  <project path="external/LibPhone2" name="platform_external_LibPhone2" remote="jos" clone-depth="1"/>
   <project path="external/libphonenumber" name="platform/external/libphonenumber" groups="pdk"/>
   <project path="external/libpng" name="platform_external_libpng" groups="pdk" remote="grapheneos" aosp-name="platform/external/libpng"/>
   <project path="external/libppd" name="platform/external/libppd" groups="pdk"/>
