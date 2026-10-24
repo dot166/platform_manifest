@@ -3,8 +3,8 @@
 and run 'manage manifest_only' from the root of OS checkout. -->
 <manifest>
   <remote name="jos" fetch="https://github.com/dot166/" revision="refs/heads/17"/>
-  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026100600"/>
-  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026100600"/>
+  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026102100"/>
+  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026102100"/>
   <remote name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/"/>
   <default revision="refs/tags/android-17.0.0_r1" remote="aosp" sync-j="4"/>
   <superproject name="platform/superproject" remote="aosp" revision="android-17.0.0_r1"/>
@@ -51,7 +51,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="device/google/bluejay-kernels/6.1" name="device_google_bluejay-kernels_6.1" remote="grapheneos" clone-depth="1"/>
   <project path="device/google/caimito-kernels/6.1" name="device_google_caimito-kernels_6.1" remote="grapheneos" clone-depth="1"/>
   <project path="device/google/comet-kernels/6.1" name="device_google_comet-kernels_6.1" remote="grapheneos" clone-depth="1"/>
-  <project path="device/google/cuttlefish" name="device/google/cuttlefish" groups="device,pdk"/>
+  <project path="device/google/cuttlefish" name="device_google_cuttlefish" groups="device,pdk" remote="grapheneos" aosp-name="device/google/cuttlefish"/>
   <project path="device/google/cuttlefish_prebuilts" name="device/google/cuttlefish_prebuilts" groups="device,pdk" clone-depth="1"/>
   <project path="device/google/cuttlefish_vmm" name="device/google/cuttlefish_vmm" groups="device,pdk" clone-depth="1"/>
   <project path="device/google/felix-kernels/6.1" name="device_google_felix-kernels_6.1" remote="grapheneos" clone-depth="1"/>
@@ -397,7 +397,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="external/marisa-trie" name="platform/external/marisa-trie" groups="pdk"/>
   <project path="external/mbedtls" name="platform/external/mbedtls" groups="pdk"/>
   <project path="external/mdnsresponder" name="platform/external/mdnsresponder" groups="pdk"/>
-  <project path="external/mesa3d" name="platform/external/mesa3d" groups="pdk-cw-fs,pdk-fs"/>
+  <project path="external/mesa3d" name="platform_external_mesa3d" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/external/mesa3d"/>
   <project path="external/Messaging" name="platform_external_Messaging" remote="grapheneos" clone-depth="1"/>
   <project path="external/mime-support" name="platform/external/mime-support" groups="pdk"/>
   <project path="external/minidns" name="platform/external/minidns" groups="pdk"/>
@@ -705,8 +705,8 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="kernel/prebuilts/6.1/x86_64" name="kernel/prebuilts/6.1/x86-64" groups="pdk" clone-depth="1"/>
   <project path="kernel/prebuilts/6.12/arm64" name="kernel/prebuilts/6.12/arm64" groups="pdk" clone-depth="1"/>
   <project path="kernel/prebuilts/6.12/x86_64" name="kernel/prebuilts/6.12/x86-64" groups="pdk" clone-depth="1"/>
-  <project path="kernel/prebuilts/6.18/arm64" name="kernel/prebuilts/6.18/arm64" groups="pdk" clone-depth="1"/>
-  <project path="kernel/prebuilts/6.18/x86_64" name="kernel/prebuilts/6.18/x86-64" groups="pdk" clone-depth="1"/>
+  <project path="kernel/prebuilts/6.18/arm64" name="kernel_prebuilts_6.18_arm64" groups="pdk" remote="grapheneos" clone-depth="1"/>
+  <project path="kernel/prebuilts/6.18/x86_64" name="kernel_prebuilts_6.18_x86-64" groups="pdk" remote="grapheneos" clone-depth="1"/>
   <project path="kernel/prebuilts/6.6/arm64" name="kernel/prebuilts/6.6/arm64" groups="pdk" clone-depth="1"/>
   <project path="kernel/prebuilts/6.6/x86_64" name="kernel/prebuilts/6.6/x86-64" groups="pdk" clone-depth="1"/>
   <project path="kernel/prebuilts/common-modules/trusty/6.12/arm64" name="kernel/prebuilts/common-modules/trusty/6.12/arm64" groups="pdk" clone-depth="1"/>
@@ -715,8 +715,8 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="kernel/prebuilts/common-modules/virtual-device/6.1/x86-64" name="kernel/prebuilts/common-modules/virtual-device/6.1/x86-64" groups="pdk" clone-depth="1"/>
   <project path="kernel/prebuilts/common-modules/virtual-device/6.12/arm64" name="kernel/prebuilts/common-modules/virtual-device/6.12/arm64" groups="pdk" clone-depth="1"/>
   <project path="kernel/prebuilts/common-modules/virtual-device/6.12/x86-64" name="kernel/prebuilts/common-modules/virtual-device/6.12/x86-64" groups="pdk" clone-depth="1"/>
-  <project path="kernel/prebuilts/common-modules/virtual-device/6.18/arm64" name="kernel/prebuilts/common-modules/virtual-device/6.18/arm64" groups="pdk" clone-depth="1"/>
-  <project path="kernel/prebuilts/common-modules/virtual-device/6.18/x86-64" name="kernel/prebuilts/common-modules/virtual-device/6.18/x86-64" groups="pdk" clone-depth="1"/>
+  <project path="kernel/prebuilts/common-modules/virtual-device/6.18/arm64" name="kernel_prebuilts_common-modules_virtual-device_6.18_arm64" groups="pdk" remote="grapheneos" clone-depth="1"/>
+  <project path="kernel/prebuilts/common-modules/virtual-device/6.18/x86-64" name="kernel_prebuilts_common-modules_virtual-device_6.18_x86-64" groups="pdk" remote="grapheneos" clone-depth="1"/>
   <project path="kernel/prebuilts/common-modules/virtual-device/6.6/arm64" name="kernel/prebuilts/common-modules/virtual-device/6.6/arm64" groups="pdk" clone-depth="1"/>
   <project path="kernel/prebuilts/common-modules/virtual-device/6.6/x86-64" name="kernel/prebuilts/common-modules/virtual-device/6.6/x86-64" groups="pdk" clone-depth="1"/>
   <project path="kernel/prebuilts/common-modules/virtual-device/mainline/arm64" name="kernel/prebuilts/common-modules/virtual-device/mainline/arm64" groups="pdk" clone-depth="1"/>
@@ -899,7 +899,6 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="prebuilts/maven_repo/bumptech" name="platform/prebuilts/maven_repo/bumptech" groups="pdk-cw-fs,pdk-fs" clone-depth="1"/>
   <project path="prebuilts/misc" name="platform/prebuilts/misc" groups="pdk,sysui-studio" clone-depth="1"/>
   <project path="prebuilts/ndk" name="platform/prebuilts/ndk" groups="pdk" clone-depth="1"/>
-  <project path="prebuilts/qemu-kernel" name="platform_prebuilts_qemu-kernel" groups="pdk" remote="grapheneos" clone-depth="1"/>
   <project path="prebuilts/r8" name="platform/prebuilts/r8" groups="pdk,sysui-studio" clone-depth="1"/>
   <project path="prebuilts/remoteexecution-client" name="platform/prebuilts/remoteexecution-client" groups="pdk" clone-depth="1"/>
   <project path="prebuilts/runtime" name="platform/prebuilts/runtime" groups="pdk" clone-depth="1"/>
