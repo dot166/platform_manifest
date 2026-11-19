@@ -3,8 +3,8 @@
 and run 'manage manifest_only' from the root of OS checkout. -->
 <manifest>
   <remote name="jos" fetch="https://github.com/dot166/" revision="refs/heads/17"/>
-  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026102100"/>
-  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026102100"/>
+  <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2026111800"/>
+  <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2026111800"/>
   <remote name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/"/>
   <default revision="refs/tags/android-17.0.0_r1" remote="aosp" sync-j="4"/>
   <superproject name="platform/superproject" remote="aosp" revision="android-17.0.0_r1"/>
@@ -55,9 +55,10 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="device/google/cuttlefish_prebuilts" name="device/google/cuttlefish_prebuilts" groups="device,pdk" clone-depth="1"/>
   <project path="device/google/cuttlefish_vmm" name="device/google/cuttlefish_vmm" groups="device,pdk" clone-depth="1"/>
   <project path="device/google/felix-kernels/6.1" name="device_google_felix-kernels_6.1" remote="grapheneos" clone-depth="1"/>
-  <project path="device/google/laguna-kernels/6.6" name="device_google_laguna-kernels_6.6" remote="grapheneos" clone-depth="1"/>
+  <project path="device/google/laguna-kernels/6.18" name="device_google_laguna-kernels_6.18" remote="grapheneos" clone-depth="1"/>
   <project path="device/google/lynx-kernels/6.1" name="device_google_lynx-kernels_6.1" remote="grapheneos" clone-depth="1"/>
   <project path="device/google/pantah-kernels/6.1" name="device_google_pantah-kernels_6.1" remote="grapheneos" clone-depth="1"/>
+  <project path="device/google/pixel-kernels/6.18" name="device_google_pixel-kernels_6.18" remote="grapheneos" clone-depth="1"/>
   <project path="device/google/raviole-kernels/6.1" name="device_google_raviole-kernels_6.1" remote="grapheneos" clone-depth="1"/>
   <project path="device/google/sdv" name="device/google/sdv" groups="swcar,pdk" clone-depth="1"/>
   <project path="device/google/sdv_display_safety" name="device/google/sdv_display_safety" groups="swcar,pdk" clone-depth="1"/>
@@ -71,7 +72,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="device/linaro/hikey" name="device/linaro/hikey" groups="device,hikey,pdk"/>
   <project path="device/linaro/hikey-kernel" name="device/linaro/hikey-kernel" groups="device,hikey,pdk" clone-depth="1"/>
   <project path="device/sample" name="device/sample" groups="pdk"/>
-  <project path="external/aac" name="platform/external/aac" groups="pdk"/>
+  <project path="external/aac" name="platform_external_aac" groups="pdk" remote="grapheneos" aosp-name="platform/external/aac"/>
   <project path="external/abseil-cpp" name="platform/external/abseil-cpp" groups="pdk"/>
   <project path="external/accessibility-test-framework" name="platform/external/accessibility-test-framework" groups="pdk"/>
   <project path="external/accompanist" name="platform/external/accompanist" groups="pdk"/>
@@ -103,7 +104,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="external/armnn" name="platform/external/armnn" groups="pdk-lassen,pdk-arsp-ag-sot,pdk-arsp-common"/>
   <project path="external/auto" name="platform/external/auto" groups="pdk"/>
   <project path="external/automotive-design-compose-protos" name="platform/external/automotive-design-compose-protos" groups="pdk"/>
-  <project path="external/avb" name="platform/external/avb" groups="pdk"/>
+  <project path="external/avb" name="platform_external_avb" groups="pdk" remote="grapheneos" aosp-name="platform/external/avb"/>
   <project path="external/aws-crt-java" name="platform/external/aws-crt-java" groups="pdk,tradefed"/>
   <project path="external/aws-eventstream-java" name="platform/external/aws-eventstream-java" groups="pdk,tradefed"/>
   <project path="external/aws-sdk-java-v2" name="platform/external/aws-sdk-java-v2" groups="pdk,tradefed"/>
@@ -243,7 +244,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="external/hamcrest" name="platform/external/hamcrest" groups="pdk"/>
   <project path="external/hardened_malloc" name="hardened_malloc" remote="grapheneos"/>
   <project path="external/harfbuzz_ng" name="platform/external/harfbuzz_ng" groups="pdk,qcom_msm8x26"/>
-  <project path="external/hplip" name="platform/external/hplip" groups="pdk"/>
+  <project path="external/hplip" name="platform_external_hplip" groups="pdk" remote="grapheneos" aosp-name="platform/external/hplip"/>
   <project path="external/hyphenation-patterns" name="platform/external/hyphenation-patterns" groups="pdk"/>
   <project path="external/iamf_tools" name="platform/external/iamf_tools" groups="pdk"/>
   <project path="external/icing" name="platform/external/icing" groups="pdk"/>
@@ -354,7 +355,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="external/libnfnetlink" name="platform/external/libnfnetlink" groups="pdk"/>
   <project path="external/libnl" name="platform/external/libnl" groups="pdk"/>
   <project path="external/libogg" name="platform/external/libogg" groups="pdk"/>
-  <project path="external/libopenapv" name="platform/external/libopenapv" groups="pdk"/>
+  <project path="external/libopenapv" name="platform_external_libopenapv" groups="pdk" remote="grapheneos" aosp-name="platform/external/libopenapv"/>
   <project path="external/libopus" name="platform/external/libopus" groups="pdk"/>
   <project path="external/libpalmrejection" name="platform/external/libpalmrejection" groups="pdk"/>
   <project path="external/libpcap" name="platform/external/libpcap" groups="pdk"/>
@@ -595,7 +596,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="external/toybox" name="platform/external/toybox" groups="pdk"/>
   <project path="external/tpm2-tss" name="platform/external/tpm2-tss" groups="pdk"/>
   <project path="external/trace-cmd" name="platform/external/trace-cmd" groups="pdk"/>
-  <project path="external/tremolo" name="platform/external/tremolo" groups="pdk"/>
+  <project path="external/tremolo" name="platform_external_tremolo" groups="pdk" remote="grapheneos" aosp-name="platform/external/tremolo"/>
   <project path="external/trusty/arm-trusted-firmware" name="trusty/external/trusted-firmware-a" groups="trusty,pdk"/>
   <project path="external/trusty/bootloader" name="trusty/external/trusty" groups="trusty,pdk"/>
   <project path="external/trusty/headers" name="trusty/external/headers" groups="trusty,pdk"/>
@@ -733,7 +734,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="packages/apps/Car/Launcher" name="platform/packages/apps/Car/Launcher" groups="pdk-fs"/>
   <project path="packages/apps/Car/Notification" name="platform/packages/apps/Car/Notification" groups="pdk-fs"/>
   <project path="packages/apps/Car/RotaryController" name="platform/packages/apps/Car/RotaryController" groups="pdk-fs,pdk-cw-tvc"/>
-  <project path="packages/apps/Car/Settings" name="platform/packages/apps/Car/Settings" groups="pdk-fs,pdk-cw-tvc"/>
+  <project path="packages/apps/Car/Settings" name="platform_packages_apps_Car_Settings" groups="pdk-fs,pdk-cw-tvc" remote="grapheneos" aosp-name="platform/packages/apps/Car/Settings"/>
   <project path="packages/apps/Car/systemlibs" name="platform/packages/apps/Car/systemlibs" groups="pdk-fs,pdk-cw-tvc"/>
   <project path="packages/apps/Car/SystemUI" name="platform/packages/apps/Car/SystemUI" groups="pdk-fs,pdk-cw-tvc"/>
   <project path="packages/apps/CarrierConfig" name="platform/packages/apps/CarrierConfig" groups="pdk-cw-fs,pdk-fs"/>
@@ -759,7 +760,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="jos" aosp-name="platform/packages/apps/Launcher3"/>
   <project path="packages/apps/Login" name="platform/packages/apps/Login" groups="pdk-fs"/>
   <project path="packages/apps/LogViewer" name="platform_packages_apps_LogViewer" groups="pdk-fs" remote="grapheneos"/>
-  <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" groups="pdk-fs"/>
+  <project path="packages/apps/ManagedProvisioning" name="platform_packages_apps_ManagedProvisioning" groups="pdk-fs" remote="grapheneos" aosp-name="platform/packages/apps/ManagedProvisioning"/>
   <project path="packages/apps/Multiuser" name="platform/packages/apps/Multiuser" groups="pdk-fs"/>
   <project path="packages/apps/Music" name="platform/packages/apps/Music" groups="pdk-fs"/>
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" groups="pdk-fs"/>
@@ -787,7 +788,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="packages/apps/Test/connectivity" name="platform/packages/apps/Test/connectivity" groups="pdk"/>
   <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="grapheneos" aosp-name="platform/packages/apps/ThemePicker"/>
   <project path="packages/apps/Traceur" name="platform/packages/apps/Traceur" groups="pdk-fs,sysui-studio,pdk-cw-tvc"/>
-  <project path="packages/apps/TvSettings" name="platform/packages/apps/TvSettings" groups="pdk-fs,pdk-cw-tvc"/>
+  <project path="packages/apps/TvSettings" name="platform_packages_apps_TvSettings" groups="pdk-fs,pdk-cw-tvc" remote="grapheneos" aosp-name="platform/packages/apps/TvSettings"/>
   <project path="packages/apps/TvSystemUI" name="platform/packages/apps/TvSystemUI" groups="pdk-fs"/>
   <project path="packages/apps/UniversalMediaPlayer" name="platform/packages/apps/UniversalMediaPlayer"/>
   <project path="packages/apps/Updater" name="platform_packages_apps_Updater" remote="jos"/>
@@ -816,17 +817,17 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="packages/modules/HealthFitness" name="platform_packages_modules_HealthFitness" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/modules/HealthFitness"/>
   <project path="packages/modules/ImsMedia" name="platform/packages/modules/ImsMedia" groups="pdk"/>
   <project path="packages/modules/ImsStack" name="platform/packages/modules/ImsStack" groups="pdk"/>
-  <project path="packages/modules/IntentResolver" name="platform/packages/modules/IntentResolver" groups="pdk,sysui-studio"/>
+  <project path="packages/modules/IntentResolver" name="platform_packages_modules_IntentResolver" groups="pdk,sysui-studio" remote="grapheneos" aosp-name="platform/packages/modules/IntentResolver"/>
   <project path="packages/modules/IPsec" name="platform/packages/modules/IPsec" groups="pdk"/>
   <project path="packages/modules/Media" name="platform/packages/modules/Media" groups="pdk"/>
   <project path="packages/modules/ModuleMetadata" name="platform/packages/modules/ModuleMetadata" groups="pdk"/>
   <project path="packages/modules/NetworkStack" name="platform_packages_modules_NetworkStack" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/modules/NetworkStack"/>
-  <project path="packages/modules/NeuralNetworks" name="platform/packages/modules/NeuralNetworks" groups="pdk-cw-fs,pdk-fs"/>
+  <project path="packages/modules/NeuralNetworks" name="platform_packages_modules_NeuralNetworks" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/modules/NeuralNetworks"/>
   <project path="packages/modules/Nfc" name="platform_packages_modules_Nfc" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/modules/Nfc"/>
   <project path="packages/modules/NpuManager" name="platform/packages/modules/NpuManager" groups="pdk-cw-fs,pdk-fs"/>
   <project path="packages/modules/OnDevicePersonalization" name="platform/packages/modules/OnDevicePersonalization" groups="pdk-cw-fs,pdk-fs"/>
   <project path="packages/modules/Permission" name="platform_packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/modules/Permission"/>
-  <project path="packages/modules/Profiling" name="platform/packages/modules/Profiling" groups="pdk"/>
+  <project path="packages/modules/Profiling" name="platform_packages_modules_Profiling" groups="pdk" remote="grapheneos" aosp-name="platform/packages/modules/Profiling"/>
   <project path="packages/modules/RemoteKeyProvisioning" name="platform_packages_modules_RemoteKeyProvisioning" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/modules/RemoteKeyProvisioning"/>
   <project path="packages/modules/RuntimeI18n" name="platform/packages/modules/RuntimeI18n" groups="pdk-cw-fs,pdk-fs"/>
   <project path="packages/modules/Scheduling" name="platform/packages/modules/Scheduling" groups="pdk-cw-fs,pdk-fs"/>
@@ -862,7 +863,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="packages/services/DeviceAsWebcam" name="platform/packages/services/DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs"/>
   <project path="packages/services/display_safety" name="platform/packages/services/display_safety" groups="swcar,pdk"/>
   <project path="packages/services/DroidfoodAttestationFixer" name="platform/packages/services/DroidfoodAttestationFixer" groups="pdk-cw-fs,pdk-fs"/>
-  <project path="packages/services/Iwlan" name="platform/packages/services/Iwlan" groups="pdk-cw-fs,pdk-fs"/>
+  <project path="packages/services/Iwlan" name="platform_packages_services_Iwlan" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/services/Iwlan"/>
   <project path="packages/services/Mms" name="platform_packages_services_Mms" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" aosp-name="platform/packages/services/Mms"/>
   <project path="packages/services/Mtp" name="platform/packages/services/Mtp" groups="pdk-cw-fs,pdk-fs"/>
   <project path="packages/services/QualifiedNetworksService" name="platform/packages/services/QualifiedNetworksService" groups="pdk-cw-fs,pdk-fs"/>
@@ -1077,7 +1078,7 @@ and run 'manage manifest_only' from the root of OS checkout. -->
   <project path="trusty/user/app/sample" name="trusty/app/sample" groups="trusty,pdk"/>
   <project path="trusty/user/app/secretkeeper" name="trusty/app/secretkeeper" groups="trusty,pdk"/>
   <project path="trusty/user/app/storage" name="trusty/app/storage" groups="trusty,pdk"/>
-  <project path="trusty/user/base" name="trusty/lib" groups="trusty,pdk"/>
+  <project path="trusty/user/base" name="trusty_lib" groups="trusty,pdk" remote="grapheneos" aosp-name="trusty/lib"/>
   <project path="trusty/user/desktop" name="trusty/user/desktop" groups="android-desktop,pdk,trusty"/>
   <project path="trusty/vendor/google/aosp" name="trusty/vendor/google/aosp" groups="trusty,pdk">
     <copyfile src="lk_inc.mk" dest="lk_inc.mk"/>
